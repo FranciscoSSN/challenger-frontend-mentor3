@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 100%);
+
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+  padding: 100px;
+}
+
+main {
+  background: #ccc;
+  border-radius: 10px;
+
+  width: 100%;
+
+  margin: 0 auto;
+
+  padding: 100px;
+
+  display: grid;
+  grid-template-areas:
+    "A A B E"
+    "C D D E";
+
+  gap: 40px;
+}
+
+main .card:nth-child(1) {
+  grid-area: A;
+
+  background: hsl(263, 55%, 52%);
+
+  padding: 30px;
+
+  border-radius: 20px;
+  box-shadow: 5px 10px #000;
+}
+
+main .card:nth-child(1) .card-perfil,
+main .card:nth-child(2) .card-perfil,
+main .card:nth-child(3) .card-perfil,
+main .card:nth-child(4) .card-perfil,
+main .card:last-child .card-perfil {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+main .card:nth-child(1) .card-perfil img,
+main .card:nth-child(2) .card-perfil img,
+main .card:nth-child(3) .card-perfil img,
+main .card:nth-child(4) .card-perfil img,
+main .card:last-child .card-perfil img {
+  border-radius: 30px;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+main .card:nth-child(1) .card-perfil .card-info,
+main .card:nth-child(2) .card-perfil .card-info,
+main .card:nth-child(3) .card-perfil .card-info,
+main .card:nth-child(4) .card-perfil .card-info,
+main .card:last-child .card-perfil .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .card:nth-child(1) .card-perfil .card-info span,
+main .card:nth-child(2) .card-perfil .card-info span,
+main .card:nth-child(4) .card-perfil .card-info span {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+
+main .card:nth-child(1) .card-perfil .card-info p,
+main .card:nth-child(2) .card-perfil .card-info p,
+main .card:nth-child(4) .card-perfil .card-info p {
+  color: hsl(0, 0%, 81%);
+  font-weight: normal;
+  text-align: left;
+  opacity: 50%;
+}
+
+main .card:nth-child(1) > p,
+main .card:nth-child(2) > p,
+main .card:nth-child(4) > p {
+  color: hsl(0, 0%, 81%);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+
+  margin: 22px 0;
+}
+
+main .card:nth-child(1) > span,
+main .card:nth-child(2) > span,
+main .card:nth-child(4) > span {
+  color: hsl(0, 0%, 81%);
+  opacity: 70%;
+}
+
+main .card:nth-child(2) {
+  background: hsl(217, 19%, 35%);
+  padding: 30px;
+
+  border-radius: 10px;
+
+  width: 100%;
+  box-shadow: 5px 10px #000;
+}
+
+main .card:nth-child(3) {
+  background: hsl(0, 0%, 100%);
+  padding: 30px;
+
+  border-radius: 10px;
+
+  height: 18.75rem;
+  box-shadow: 5px 10px #000;
+}
+
+main .card:nth-child(3) .card-perfil .card-info span,
+main .card:last-child .card-perfil .card-info span {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+}
+
+main .card:nth-child(3) .card-perfil .card-info p,
+main .card:last-child .card-perfil .card-info p {
+  color: hsl(219, 29%, 14%);
+  font-weight: normal;
+  text-align: left;
+  opacity: 50%;
+}
+
+main .card:nth-child(3) > p,
+main .card:last-child > p {
+  color: hsl(217, 19%, 35%);
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+
+  margin: 22px 0;
+}
+
+main .card:last-child > p {
+  line-height: 30px;
+}
+
+main .card:nth-child(3) > span,
+main .card:last-child > span {
+  color: hsl(217, 19%, 35%);
+  opacity: 70%;
+}
+
+main .card:last-child > span {
+  line-height: 30px;
+}
+
+main .card:nth-child(4) {
+  grid-area: D;
+
+  background: hsl(219, 29%, 14%);
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  width: 100%;
+  box-shadow: 5px 10px #000;
+}
+
+main .card:last-child {
+  grid-area: E;
+
+  background: hsl(0, 0%, 100%);
+  padding: 30px;
+
+  border-radius: 10px;
+
+  height: 100%;
+  box-shadow: 10px 5px #000;
+}
+
+.attribution {
+  text-align: center;
+  font-size: 18px;
+
+  margin-top: 20px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(219, 29%, 14%);
+}
+
+.attribution a:hover {
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 30px;
+  }
+
+  main {
+    padding: 40px;
+
+  }
+
+  .card {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  main {
+    padding: 20px;
+
+    gap: 20px;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  main .card:nth-child(3) {
+    height: 350px;
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 20px;
+  }
+
+  main {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .card {
+    height: auto;
+  }
+}
